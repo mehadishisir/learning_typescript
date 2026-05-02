@@ -19,5 +19,23 @@ const hobbys = {
     hobby2:"traveling"
 }
 const personWithHobbys = {...person,...hobbys}
-console.log(personWithHobbys); 
+// console.log(personWithHobbys); 
 // Output: { name: "Mehadi", age: 25, city: "Dhaka", hobby1: "coding", hobby2: "traveling" }
+
+// rest parameter
+// const sendInvites =(friends1:string,friend2:string,friend3:string)=>{
+//     console.log(`send invitation to ${friends1}`);
+//     console.log(`send invitation to ${friend2}`);
+//     console.log(`send invitation to ${friend3}`);
+// }
+// sendInvites("Alice","Bob","Charlie");
+
+
+
+const sendInvites =(...friends:string[])=>{
+    friends.forEach((friends:string)=>{
+        console.log(`send invitation to ${friends}`);
+    })
+}
+ 
+sendInvites("Alice","Bob","Charlie","David","Eve");

@@ -15,3 +15,31 @@ tuple[0] = "world"; // Valid
 tuple[1] = 100; // Valid
 tuple[0] = 123; // Error: Type 'number' is not assignable to type 'string'.
 tuple[1] = "not a number"; // Error: Type 'string' is not assignable to type 'number'.  
+
+
+
+
+// reference type
+// object
+
+const user:{
+    Organization:"openAI";   // value => type:Literal type
+   readonly Role:string; // type: string
+    firstName:string,
+    middleName:string,
+    lastName:string,
+    isMarried?:boolean,
+}={
+    Organization:"openAI",
+    Role:"Developer",
+    firstName:"Mehadi",
+    middleName:"Hassan",
+    lastName:"Shisir",
+    isMarried:false
+}
+user.middleName=123; // Error: Type 'number' is not assignable to type 'string'.
+user.firstName="John"; // Valid
+user.Organization="Google"; // Error: Type 'string' is not assignable to type '"openAI"'.
+user.Organization="openAI"; // Valid
+
+user.Role="Manager"; // Error: Cannot assign to 'Role' because it is a read-only property.

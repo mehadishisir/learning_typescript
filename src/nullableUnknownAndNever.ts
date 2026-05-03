@@ -31,3 +31,8 @@ if (typeof input === "number"){
    discountCalculator(100)
    discountCalculator("100 taka")
    discountCalculator(null)
+
+//    never type
+const throwError =(message:string):never=>{
+    throw new Error(message);
+}

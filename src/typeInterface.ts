@@ -30,3 +30,5 @@ interface IUser{
 interface IRole{
     role:"admin"|"user";
 }
+// function 
+
